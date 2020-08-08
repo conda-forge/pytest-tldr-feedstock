@@ -5,7 +5,7 @@ Home: https://github.com/freakboy3742/pytest-tldr
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: A pytest plugin that limits the output to just the things you need.
 
