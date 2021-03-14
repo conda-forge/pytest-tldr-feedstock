@@ -1,27 +1,27 @@
 {% set name = "pytest-tldr" %}
-{% set version = "0.2.1" %}
+{% set version = "0.2.4" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 008b7d53cabbce9d49ee7a92754ed4adafc056bc49ae01b257c2ffb1f5ce2408
+  sha256: 764f928e9ecdc615c2b4e6f78cee3bb865c76a08c57fdf93ee5f0ee99f5f25ee
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python
+    - python >=3.6
     - pytest-runner
     - pytest >=3.5.0
   run:
-    - python
+    - python >=3.6
     - pytest >=3.5.0
 test:
   imports:
@@ -34,7 +34,7 @@ about:
   home: https://github.com/freakboy3742/pytest-tldr
   license: BSD-3-Clause
   license_file: LICENSE
-  summary: "A pytest plugin that limits the output to just the things you need."
+  summary: A pytest plugin that limits the output to just the things you need.
   dev_url: https://github.com/freakboy3742/pytest-tldr
 
 extra:
