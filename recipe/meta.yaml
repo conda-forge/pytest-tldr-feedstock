@@ -17,11 +17,11 @@ build:
 requirements:
   host:
     - pip
-    - python
+    - python >=3.6
     - pytest-runner
     - pytest >=3.5.0
   run:
-    - python
+    - python >=3.6
     - pytest >=3.5.0
 test:
   imports:
