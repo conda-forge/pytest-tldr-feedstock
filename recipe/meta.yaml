@@ -1,5 +1,5 @@
 {% set name = "pytest-tldr" %}
-{% set version = "0.2.4" %}
+{% set version = "0.2.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 764f928e9ecdc615c2b4e6f78cee3bb865c76a08c57fdf93ee5f0ee99f5f25ee
+  sha256: 43f43fe758569df620c433a79d3cbee698e77268efebbc6e22ce1e66095a0881
 
 build:
   number: 0
