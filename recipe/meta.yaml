@@ -6,22 +6,23 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 43f43fe758569df620c433a79d3cbee698e77268efebbc6e22ce1e66095a0881
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
     - pytest-runner
     - pytest >=3.5.0
+    - setuptools 73.0.1
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - pytest >=3.5.0
 test:
   imports:
@@ -30,6 +31,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 about:
   home: https://github.com/freakboy3742/pytest-tldr
   license: BSD-3-Clause
