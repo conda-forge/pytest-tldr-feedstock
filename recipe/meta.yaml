@@ -20,6 +20,7 @@ requirements:
     - python {{ python_min }}
     - pytest-runner
     - pytest >=3.5.0
+    - setuptools 73.0.1
   run:
     - python >={{ python_min }}
     - pytest >=3.5.0
